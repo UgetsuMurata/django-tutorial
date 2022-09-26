@@ -1,0 +1,6 @@
+M - Model
+    - representation of data.
+V - View
+    - what accepts request and gets appropriate data.
+T - Template
+    - visual page structure sent to client.
