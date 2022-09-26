@@ -20,6 +20,29 @@
             font-size: 80%;
             color: #aaaaaa;
         }
+        a{
+            text-decoration: none;
+        }
+        .button{
+            display: block;
+            width: 80%;
+            background: #55f;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            color: black;
+            margin: 5px auto;
+        }
+        .add{
+            background: #a2a;
+            width: fit-content;
+        }
+        .button:hover{
+            background: #33d
+        }
+        .add:hover{
+            background: #808;
+        }
     </style>
 </head>
 <body>
@@ -27,10 +50,12 @@
     <ul>
     {% for movie in movies %}
         <li>
-            <h2>{{movie.title}} <span class = "list-span">({{movie.year}})</span></h2>
-            
+            <a href="{{movie.id}}" class="button">
+                <h2>{{movie.title}} <span class = "list-span">({{movie.year}})</span></h2>
+            </a>
         </li>
     {% endfor %}
     </ul>
+    <a href="/movies/add/" class="button add">Add a movie +</a>
 </body>
 </html>
